@@ -132,7 +132,7 @@ const Auth = () => {
           <Grid container spacing={0}>
             <Grid item md={6} sm={12} className="left-div">
               <div>
-                <h2>SIGNUP RIGHT NOW</h2>
+                <h2>SIGN UP RIGHT NOW</h2>
               </div>
               <div className="about-line">
                 <div className={classes.root}>
@@ -143,7 +143,7 @@ const Auth = () => {
                   />
                   <p>
                     {" "}
-                    Find people, make friends and comunicate with each other
+                    Find people, make friends and communicate with each other
                   </p>
                 </div>
               </div>
@@ -154,7 +154,7 @@ const Auth = () => {
                     src="/images/experiance5.png"
                     className={classes.large}
                   />
-                  <p> Share your experiance with your friends</p>
+                  <p> Share your experience with your friends</p>
                 </div>
               </div>
               <div className="about-line">
