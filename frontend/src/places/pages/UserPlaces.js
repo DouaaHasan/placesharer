@@ -146,7 +146,10 @@ const UserPlaces = () => {
       <ErrorModal
         error={getError(error)}
         header="Hello there!"
-        onClear={clearError}
+        onClear={()=>{
+          clearError();
+          setTags([])
+        }}
       />
     );
 
