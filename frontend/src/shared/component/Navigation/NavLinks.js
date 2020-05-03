@@ -14,7 +14,7 @@ const NavLinks = (props) => {
   return (
     <ul className="nav-links no-select">
       <li>
-        <NavLink to="/" exact>
+        <NavLink to={auth.token ? `/` : `/users`} exact>
           ALL USERS
         </NavLink>
       </li>

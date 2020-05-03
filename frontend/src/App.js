@@ -79,7 +79,7 @@ const App = () => {
   } else {
     routes = (
       <Switch>
-        <Route path="/" exact>
+        <Route path="/users" exact>
           <Users />
         </Route>
         <Route path="/:userId/places" exact>
