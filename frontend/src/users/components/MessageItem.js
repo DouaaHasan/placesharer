@@ -32,14 +32,14 @@ const MessageItem = ({ msg, messageDeleteHandler, getUserMessages, contacts }) =
       <div className={`msgInfo ${msg.isSent ? "toRyt" : "toLeft"}`}>
         {msg.isSent ? (
           <Fragment>
-            <p>{formatDate(msg.date)}</p>
+            <span>{formatDate(msg.date)}</span>
 
-            <button onClick={() => delMessage(message.id, msg._id)}>x</button>
+            <button onClick={() => delMessage(message.id, msg._id)}>&#10060;</button>
           </Fragment>
         ) : (
           <Fragment>
-            <button onClick={() => delMessage(message.id, msg._id)}>x</button>
-            <p>{formatDate(msg.date)}</p>
+            <button onClick={() => delMessage(message.id, msg._id)}>&#10060;</button>
+            <span>{formatDate(msg.date)}</span>
           </Fragment>
         )}
       </div>

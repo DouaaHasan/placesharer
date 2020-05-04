@@ -190,14 +190,17 @@ const Messages = () => {
                         />
                       </div>
                       <div className="user-item__info m-1 fade-in">
-                        <h3 className="fade-in">{contact.corresponder.name}</h3>
+                        <h3 className="fade-in corr-name">
+                          {contact.corresponder.name}
+                        </h3>
                       </div>
                     </div>
 
                     <button
+                      className="corr-delete"
                       onClick={() => dltCorresponder(contact.corresponder._id)}
                     >
-                      X
+                      &#10060;
                     </button>
                   </Card>
                 ))}
@@ -230,7 +233,7 @@ const Messages = () => {
               }}
               className="mobile-hidden"
             >
-              BACK
+              &#10094; BACK
             </a>
             <div className="msgsContainer fade-in">
               {allMessages.length > 0 ? (
