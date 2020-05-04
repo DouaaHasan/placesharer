@@ -23,6 +23,10 @@
   background: #ff0055;
 }
 
+.activatedContact button{
+  filter: sepia(100%);
+
+}
 .link-text {
   color: #ff0055;
   width: 70%;
