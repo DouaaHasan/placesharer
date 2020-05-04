@@ -20,9 +20,13 @@
 
 .activatedContact {
   box-shadow: 3px 3px #666;
-  background: rgba(0, 0, 0, 0.13);
+  background: #ff0055;
 }
 
+.activatedContact button{
+  filter: sepia(100%);
+
+}
 .link-text {
   color: #ff0055;
   width: 70%;
@@ -43,7 +47,9 @@
 }
 
 .user-item__content button:hover {
-  background: #ff0055;
+  transform: scale(1.05);
+  filter: grayscale(100%);
+  cursor: pointer;
 }
 
 .cardWidth {
@@ -69,6 +75,12 @@
 .mobile-hidden {
   display: none;
 }
+.corr-name {
+  font-size: 1rem;
+}
+.corr-delete {
+  background: none;
+}
 
 @media (max-width: 768px) {
   .myMsg p:nth-child(2) {
@@ -86,7 +98,7 @@
   .mobile-hidden {
     display: inline;
     color: #ff0055;
-    text-decoration: underline;
+    text-decoration: none;
   }
   .contact__container-hidden {
     display: none;

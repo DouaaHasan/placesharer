@@ -9,7 +9,6 @@ import { AuthContext } from "../../shared/context/auth-context";
 const PlaceList = ({ items, onDeletePlace, userId }) => {
   const auth = useContext(AuthContext);
   if (items.length === 0) {
-    console.log(userId, auth.userId)
     return (
       <div className="place-list center">
         <Card>

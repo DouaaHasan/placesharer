@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect, useContext } from "react";
 import PlaceList from "../components/PlaceList";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import useHttpClient from "../../shared/hooks/http-hook";
 import ErrorModal from "../../shared/component/UIElements/ErrorModal";
 import "./UserPlaces.css";
@@ -61,6 +61,7 @@ const UserPlaces = () => {
   const [sortBy, setSortBy] = useState("");
   const [tags, setTags] = useState([]);
   const [menuItemValue, setMenuItemValue] = useState();
+  const history = useHistory();
 
   const getPlaces = async () => {
     try {
@@ -141,12 +142,23 @@ const UserPlaces = () => {
     }
   };
 
+
+  const customErrorClear = ()=>{
+    if(!places){
+      clearError();
+      history.push("/")
+    }else{
+      setTags([]);
+      clearError();
+    }
+  }
+  
   if (error)
     return (
       <ErrorModal
         error={getError(error)}
         header="Hello there!"
-        onClear={clearError}
+        onClear={customErrorClear}
       />
     );
 
